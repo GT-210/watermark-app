@@ -23,6 +23,7 @@ jobs:
       - name: Generate Android scaffold & inject our sources
         run: |
           flutter create --org com.daddy.watermark --project-name watermark_app --platforms=android scaffold
+          rm -rf scaffold/lib
           cp -r src/lib scaffold/lib
           cp src/pubspec.yaml scaffold/pubspec.yaml
           cp src/android/app/src/main/AndroidManifest.xml scaffold/android/app/src/main/AndroidManifest.xml
