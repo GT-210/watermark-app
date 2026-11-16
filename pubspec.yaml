@@ -1,0 +1,23 @@
+name: watermark_app
+description: "图片水印大师 - 批量透明PNG/文字水印自动平铺工具"
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # 相册选图（支持多选）
+  image_picker: ^1.0.7
+  # 运行时权限
+  permission_handler: ^11.3.0
+  # 保存图片到系统相册
+  gal: ^2.3.0
+  # 临时目录 / 路径拼接
+  path_provider: ^2.1.2
+  path: ^1.9.0
+
+flutter:
+  uses-material-design: true
