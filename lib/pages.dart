@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.white.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(28),
                     ),
-                    child: const Icon(Icons.watermark_outlined,
+                    child: const Icon(Icons.image_outlined,
                         size: 84, color: Color(0xFFB9C4FF)),
                   ),
                   const SizedBox(height: 28),
@@ -296,14 +296,22 @@ class _EditorPageState extends State<EditorPage> {
                     horizontal: 12, vertical: 8),
                 child: Column(
                   children: [
-                    _slider('大小', _scale, 0.05, 0.6,
-                        (v) => setState(() => _scale = v).._refresh()),
-                    _slider('密度', _spacing, 1.0, 4.0,
-                        (v) => setState(() => _spacing = v).._refresh()),
-                    _slider('透明', _opacity, 0.05, 1.0,
-                        (v) => setState(() => _opacity = v).._refresh()),
-                    _slider('角度', _angle, -90, 90,
-                        (v) => setState(() => _angle = v).._refresh()),
+                    _slider('大小', _scale, 0.05, 0.6, (v) {
+                      setState(() => _scale = v);
+                      _refresh();
+                    }),
+                    _slider('密度', _spacing, 1.0, 4.0, (v) {
+                      setState(() => _spacing = v);
+                      _refresh();
+                    }),
+                    _slider('透明', _opacity, 0.05, 1.0, (v) {
+                      setState(() => _opacity = v);
+                      _refresh();
+                    }),
+                    _slider('角度', _angle, -90, 90, (v) {
+                      setState(() => _angle = v);
+                      _refresh();
+                    }),
                     ListTile(
                       contentPadding: EdgeInsets.zero,
                       title: const Text('水印颜色',
