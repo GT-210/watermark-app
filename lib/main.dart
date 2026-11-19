@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'pages.dart';
+import 'theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,10 +16,7 @@ class WatermarkApp extends StatelessWidget {
     return MaterialApp(
       title: '图片水印大师',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF5B6EF5)),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.light,
       home: const HomePage(),
     );
   }
